@@ -1,0 +1,31 @@
+Installation:
+
+cpan YAML
+cpan Dancer
+cpan Crypt::PasswdMD5
+cpan Dancer::Session::Cookie
+cpan Dancer::Plugin::DBIC
+
+cpan Template
+cpan DBIx::Class
+
+mysql> create database pickie;
+mysql> create user pickie@localhost identified by 'pickie';
+mysql> grant all privileges on pickie.* to pickie@localhost;
+mysql> flush privileges;
+
+Import table structure:
+    $ mysql -u root --database=pickie -p < pickie.sql
+
+
+Generate a MD5 password hash to log into the site:
+    perl -MCrypt::PasswdMD5 -e 'print unix_md5_crypt("pickie") ."\n"';
+    
+Generate a MD5 password hash to unlock your keys:
+    perl -MCrypt::PasswdMD5 -e 'print unix_md5_crypt("pickie") ."\n"';
+
+
+Insert into database:
+    mysql> insert into users (username,login_password,key_password)
+        values
+            ("pickie","$1$SPDo3zyW$NLpOnymzOKd9NJncRVQLP0","$1$SPDo3zyW$NLpOnymzOKd9NJncRVQLP0");
