@@ -81,6 +81,8 @@ body>#Header {height:14px;}
 	}
 /* Again, "be nice to Opera 5". */
 body>#Menu {width:150px;}
+input { border:1px solid #afaa9d; color:#afaa9d; background-color:#fcfcfc; padding:3px 2px; font-size:24px;  }
+
 
 
 

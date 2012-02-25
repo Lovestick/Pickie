@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Pickie</title>
+<style type="text/css" media="all">@import "/css/style.css";</style>
+</head>
+
+<body>
+<div id="Content">
+
+[% vars.info %]
+<form method="POST" action="/login">
+<table class="inner" width="700">
+	<tr><td colspan="2"><h3>Login</h3></td></tr>
+	<tr><td width="150">Username</td><td align="left"><input type="text" name="username" autocomplete="off"></td></tr>
+	<tr><td>Password</td><td><input type="password" name="password"></td></tr>
+    <tr><td><img src="/captcha"></td><td><input type="text" name="captcha" size="5" autocomplete="off"></td></tr>
+    <tr><td colspan="2">	<input type="submit" value="Login"></td></tr>
+</table>
+</form>
+
+[% IF vars.errors.defined %]
+    Error(s):<br />
+    [% FOR error IN vars.errors %]
+		<li>[% error %]</li>
+    [% END %]
+[% END %]
+
+</div>
+
+</body>
+</html>
+
+
+

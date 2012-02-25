@@ -5,6 +5,11 @@ cpan Dancer
 cpan Crypt::PasswdMD5
 cpan Dancer::Session::Cookie
 cpan Dancer::Plugin::DBIC
+cpan Data::Random
+cpan Crypt::CBC
+
+I found it easier to install my OS's perl-GD package,then :
+cpan Dancer::Plugin::Captcha::SecurityImage
 
 cpan Template
 cpan DBIx::Class

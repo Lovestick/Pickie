@@ -1,0 +1,24 @@
+</div>
+
+<div id="Menu">
+    
+    [% FOREACH wiki IN session.wiki %]
+    <a href="/wiki/[% wiki.container_id %]">[% wiki.container_name %]</a><br />
+    
+    [% END %]
+    (<a href="/wiki/new">new wiki</a>)
+   
+   
+
+</div>
+
+<!--
+
+ BlueRobot layout (http://bluerobot.com/web/layouts/layout1.html)
+ I like it.
+
+-->
+
+</body>
+
+</html>

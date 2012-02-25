@@ -15,7 +15,7 @@ environment: "development"
 # about unicode within your app when this setting is set (recommended).
 charset: "UTF-8"
 
-daemon: 1
+daemon: 0
 auto_reload: 0
 
 # template engine
